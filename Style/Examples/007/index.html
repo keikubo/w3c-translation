@@ -1,0 +1,204 @@
+<!doctype html public '-//W3C//DTD HTML 4.01//EN'
+  'http://www.w3.org/TR/html4/strict.dtd'>
+
+<html lang=en>
+
+<title>CSS tips &amp; tricks</title>
+
+<link rel="stylesheet" title="Gold (right, fixed) + navbar"
+  href="../../threepart-f.css" media="screen, print, projection, tv">
+
+<link rel="stylesheet" title="Handheld" href="../../handheld.css" media="handheld">
+
+<style type="text/css">
+  div.figure {
+    float: right;
+    width: 25%;
+    border: thin silver solid;
+    margin: 0.5em;
+    padding: 0.5em;
+    text-align: center
+  }
+  p.caption {
+    font-style: italic;
+    font-size: smaller;
+    text-indent: 0;
+  }
+  img.scaled {
+    width: 100%;
+  }
+  p.stb { text-indent: 0; margin-top: 0.83em }
+  p.mtb { text-indent: 0; margin-top: 2.17em }
+  p.ltb { text-indent: 0; margin-top: 3.08em }
+  div.example { border: #603 dotted; padding: 0.5em; margin: 1em 0 }
+</style>
+
+<link rel=home title="W3C" href="/">
+<link rel=top title="Style Sheets" href="/Style/">
+<link rel=up title="CSS" href="../../CSS/">
+<link rel=first title="(this page)" href="./">
+<link rel=next title="Captions" href="figures">
+<link rel=last title="Round corners &amp; shadows" href="roundshadow">
+<link rel=bookmark title="Activities" href="/Consortium/Activities">
+<link rel=bookmark title="Tech.&nbsp;reports" href="/TR/">
+<link rel=bookmark title="Translations" href="/Consortium/Translation/">
+<link rel=bookmark title="Software" href="/Status">
+<link rel=index title="Site&nbsp;index" href="/Help/siteindex">
+<link rel=search title="Search" href="http://search.w3.org/">
+<link rel=copyright title="Copyright" href="../../../Consortium/Legal/ipr-notice.html#Copyright">
+
+<link rel=alternate hreflang=az class=notranslate title="Az&#601;rbaycan" href="http://www.carionltd.com/Style/Example007/">
+<link rel=alternate hreflang=be class=notranslate title="Беларуская" href="http://eu-by.org/Style/Example007/">
+<link rel=alternate hreflang=bg class=notranslate title="Български" href="http://dichev.com/Style/Examples/007/">
+<link rel=alternate hreflang=de class=notranslate title="Deutsch" href="http://www.ich-lerne-css.de/Style/Examples/007/">
+<link rel=alternate hreflang=el class=notranslate title="Ελληνικά" href="http://www.greekcom.org/Style/Examples/007/">
+<link rel=alternate hreflang=en class=notranslate title="English" href="Overview.html">
+<link rel=alternate hreflang=es class=notranslate title="Español" href="http://www.spanish-translator-services.com/espanol/t/007/">
+<link rel=alternate hreflang=hr class=notranslate title="Hrvatski" href="http://www.mindgems.com/w3c/Style/CSS/CSS%20tips%20%26%20tricks.htm">
+<link rel=alternate hreflang=id class=notranslate title="Bahasa Indonesia" href="http://www.erasparsa.com/w3/Style/Examples/007/">
+<link rel=alternate hreflang=it class=notranslate title="Italiano" href="http://www.raggiorosso.com/Style/Examples/007/">
+<link rel=alternate hreflang=nb class=notranslate title="Norsk" href="http://www.bjornenki.com/articles/w3_style_examples_007">
+<link rel=alternate hreflang=ne class=notranslate title="&#2344;&#2375;&#2346;&#2366;&#2354;&#2368;" href="http://www.traveldoozie.com/w3/style/examples/007/">
+<link rel=alternate hreflang=nl class=notranslate title="Nederlands" href="http://www.sftcc.com/007/">
+<link rel=alternate hreflang=pl class=notranslate title="Polski" href="http://www.tlumaczenia-angielski.info/w3c/css/Overview.html">
+<link rel=alternate hreflang=pt class=notranslate title="Português" href="http://www.internetbootcamp.net/007/">
+<link rel=alternate hreflang=ro class=notranslate title="Rom&#226;n&#259;" href="http://html-ro.appspot.com/Style/Examples/007/overview.html">
+<link rel=alternate hreflang=ru class=notranslate title="Русский" href="http://www.indeep76.com/Style/Example007/">
+<link rel=alternate hreflang=sq class=notranslate title="Shqip" href="http://css-al.com/CSStipstricks.htm">
+<link rel=alternate hreflang=sr-cryl class=notranslate title="Српски" href="http://cssrs.info/csstipsandtricks.htm">
+<link rel=alternate hreflang=th class=notranslate title="ไทย" href="http://www.codingbasic.com/style/example/007/CSS-tips%26tricks.html">
+<link rel=alternate hreflang=tl class=notranslate title="Tagalog" href="http://tl.tz8.de/style-examples-007.html">
+<link rel=alternate hreflang=uk class=notranslate title="Українська" href="http://www.indeep76.com/Style/Example007ukr/">
+<link rel=alternate hreflang=vi class=notranslate title="Tiếng Việt" href="http://www.300yards.com/007/">
+<link rel=alternate hreflang=zh-hans class=notranslate title="&#31616;&#20307;&#20013;&#25991;" href="http://www.certifiedchinesetranslation.com/openaccess/CSS/">
+<link rel=alternate hreflang=zh-hant class=notranslate title="&#32321;&#39636;&#20013;&#25991;" href="http://www.certifiedchinesetranslation.com/openaccess/CSS/index-tc.html">
+
+
+<p class=translations>(<a title="About the translations" href="/Style/translating">Languages:</a>
+<a rel=alternate hreflang=az href="http://www.carionltd.com/Style/Example007/"><abbr class=notranslate title="Az&#601;rbaycan">az</abbr></a>
+<a rel=alternate hreflang=be href="http://eu-by.org/Style/Example007/"><abbr class=notranslate title="Беларуская">be</abbr></a>
+<a rel=alternate hreflang=bg href="http://dichev.com/Style/Examples/007/"><abbr class=notranslate title="Български">bg</abbr></a>
+<a rel=alternate hreflang=de href="http://www.ich-lerne-css.de/Style/Examples/007/"><abbr class=notranslate title="Deutsch">de</abbr></a>
+<a rel=alternate hreflang=el href="http://www.greekcom.org/Style/Examples/007/"><abbr class=notranslate title="Ελληνικά">el</abbr></a>
+<a rel=alternate hreflang=en href="Overview.html"><abbr class=notranslate title="English">en</abbr></a>
+<a rel=alternate hreflang=es href="http://www.spanish-translator-services.com/espanol/t/007/"><abbr class=notranslate title="Español">es</abbr></a>
+<a rel=alternate hreflang=hr href="http://www.mindgems.com/w3c/Style/CSS/CSS%20tips%20%26%20tricks.htm"><abbr class=notranslate title="Hrvatski">hr</abbr></a>
+<a rel=alternate hreflang=id href="http://www.erasparsa.com/w3/Style/Examples/007/"><abbr class=notranslate title="Bahasa Indonesia">id</abbr></a>
+<a rel=alternate hreflang=it href="http://www.raggiorosso.com/Style/Examples/007/"><abbr class=notranslate title="Italiano">it</abbr></a>
+<a rel=alternate hreflang=nb href="http://www.bjornenki.com/articles/w3_style_examples_007"><abbr class=notranslate title="Norsk">nb</abbr></a>
+<a rel=alternate hreflang=ne href="http://www.traveldoozie.com/w3/style/examples/007/"><abbr class=notranslate title="&#2344;&#2375;&#2346;&#2366;&#2354;&#2368;">ne</abbr></a>
+<a rel=alternate hreflang=nl href="http://www.sftcc.com/007/"><abbr class=notranslate title="Nederlands">nl</abbr></a>
+<a rel=alternate hreflang=pl href="http://www.tlumaczenia-angielski.info/w3c/css/Overview.html"><abbr class=notranslate title="Polski">pl</abbr></a>
+<a rel=alternate hreflang=pt href="http://www.internetbootcamp.net/007/"><abbr class=notranslate title="Português">pt</abbr></a>
+<a rel=alternate hreflang=ro href="http://html-ro.appspot.com/Style/Examples/007/overview.html"><abbr class=notranslate title="Rom&#226;n&#259;">ro</abbr></a>
+<a rel=alternate hreflang=ru href="http://www.indeep76.com/Style/Example007/"><abbr class=notranslate title="Русский">ru</abbr></a>
+<a rel=alternate hreflang=sq href="http://css-al.com/CSStipstricks.htm"><abbr class=notranslate title="Shqip">sq</abbr></a>
+<a rel=alternate hreflang=sr-cryl href="http://cssrs.info/csstipsandtricks.htm"><abbr class=notranslate title="Српски">sr-cryl</abbr></a>
+<a rel=alternate hreflang=th href="http://www.codingbasic.com/style/example/007/CSS-tips%26tricks.html"><abbr class=notranslate title="ไทย">th</abbr></a>
+<a rel=alternate hreflang=tl href="http://tl.tz8.de/style-examples-007.html"><abbr class=notranslate title="Tagalog">tl</abbr></a>
+<a rel=alternate hreflang=uk href="http://www.indeep76.com/Style/Example007ukr/"><abbr class=notranslate title="Українська">uk</abbr></a>
+<a rel=alternate hreflang=vi href="http://www.300yards.com/007/"><abbr class=notranslate title="Tiếng Việt">vi</abbr></a>
+<a rel=alternate hreflang=zh-hans href="http://www.certifiedchinesetranslation.com/openaccess/CSS/"><abbr class=notranslate title="&#31616;&#20307;&#20013;&#25991;">zh-hans</abbr></a>
+<a rel=alternate hreflang=zh-hant href="http://www.certifiedchinesetranslation.com/openaccess/CSS/index-tc.html"><abbr class=notranslate title="&#32321;&#39636;&#20013;&#25991;">zh-hant</abbr></a>)
+
+<h1>Web Style Sheets<br> CSS tips &amp; tricks</h1>
+
+<p class="hide">(This page uses CSS style sheets)
+
+<div class="map">
+<p id="p1"><a rel="chapter" href="figures">Figures/captions</a>
+
+<p id="p2"><a rel="chapter" href="menus">A pinned-down menu</a>
+
+<p id="p10"><a rel="chapter" href="indent">Indented paragraphs</a>
+
+<p id="p9"><a rel="chapter" href="alternatives">Alternative style
+sheets</a>
+
+<p id="p6"><a href="maps" rel="chapter">A confetti menu</a>
+
+<p id="p3"><a rel="chapter" href="scrollbars">Un-colored scrollbars</a>
+
+<p id="p8"><a rel="chapter" href="evenodd">Even/odd</a>
+
+<p id="p7"><a rel="chapter" href="target">A tabbed interface</a>
+
+<p id="p5"><a rel="chapter" href="fonts">Fonts</a>
+
+<p class=map-also><a rel="chapter" href="center">Centering</a>
+
+<p class=map-also><a rel="chapter" href="shadows">Shadows</a>
+
+<p class=map-also><a rel="chapter" href="text-shadow">Text
+shadows</a>
+
+<p class=map-also><a rel="chapter" href="roundshadow">Round
+corners &amp; shadows</a>
+
+<p class=map-also><a rel="chapter" href="units">Length units</a>
+</div>
+
+<div class="back">
+<div class="section" id="Tips">
+<h2>Tips &amp; tricks</h2>
+
+<p>A random collection of CSS examples and some help in using them.
+<ol>
+  <li><a href="figures">Figures &amp; captions</a>
+  <li><a href="menus">A pinned-down menu</a>
+  <li><a href="indent">Indented paragraphs</a>
+  <li><a href="alternatives">Alternative style sheets</a>
+  <li><a href="maps">A confetti menu</a>
+  <li><a href="scrollbars">Getting rid of colored scrollbars
+    (user style sheets)</a>
+  <li><a href="evenodd">Even/odd: coloring every other row</a>
+  <li><a href="target">A tabbed interface</a>
+  <li><a href="fonts">A chart comparing font styles</a>
+  <li><a href="center">Horizontal and vertical centering</a>
+  <li><a href="shadows">Boxes with drop shadows</a>
+  <li><a href="text-shadow">Text shadows</a>
+  <li><a href="roundshadow">Rounded boxes and unsharp shadows</a>
+  <li><a href="units">Units of length: px, em, cm, etc.</a>
+</ol>
+</div>
+</div>
+
+<div class="endmatter">
+
+<div class="banner">
+<p>
+<a rel=home class=home href="http://www.w3.org/"><img alt="W3C" src="http://www.w3.org/Icons/w3c_home"></a>
+<a rel=bookmark href="../../../Consortium/Activities">Activities</a>
+<a rel=bookmark href="../../../TR/">Tech.&nbsp;reports</a>
+<a rel=index href="../../../Help/siteindex">Site&nbsp;index</a>
+<a rel=bookmark href="../../../Consortium/Translation/">Translations</a>
+<a rel=bookmark href="../../../Status">Software</a>
+<a rel=search href="http://search.w3.org/">Search</a>
+<em>Nearby:</em>
+<a rel=top href="../../">Style</a>
+<a rel=up href="../../CSS/">CSS</a>
+</div>
+
+<p class="button"><a href="http://www.w3.org/Style/CSS/Buttons/"><img
+alt="CSS" src="http://www.w3.org/Style/CSS/Buttons/mwcts"></a> <a
+href="http://jigsaw.w3.org/css-validator/"><img
+src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a><a
+href="http://validator.w3.org/"><img src="http://validator.w3.org/images/vh40"
+alt="Valid HTML 4.0!" height="31" width="88"></a>
+<address>
+  <img src="../../../People/Bos/bert6.png" alt="">
+  <a href="../../../People/Bos">Bert Bos</a><br>
+  created 17 Jan 2001;<br>
+  last updated $Date: 2010/07/15 15:34:48 $ GMT
+</address>
+</div>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+sgml-declaration:"~/SGML/HTML4.dcl"
+sgml-default-doctype-name:"html"
+sgml-minimize-attributes:t
+sgml-nofill-elements:("pre" "style" "br")
+End:
+-->
